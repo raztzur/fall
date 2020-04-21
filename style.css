@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.playBtn {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  overflow: hidden;
+}
+
+.vid-container {
+  top: -100px;
+  margin: 0 auto 0 auto;
+  width: 1650px;
+  position: relative;
+  z-index: 1;
+}
+
+.phone-wrapper {
+  height: 700px;
+  width: 403px;
+  background-color: rgba(0, 128, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 417px;
+  z-index: 99;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+img {
+  display: none;
+  width: 1650px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.bottom-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 0);
+  z-index: 2;
+}
+
+.btn {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+video {
+  z-index: -1;
+  width: 1650px;
+}
+/*# sourceMappingURL=style.css.map */
