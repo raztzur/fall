@@ -13,6 +13,9 @@
   
 
       <div class="vid-container">
+
+<h1 id="loading">Loading</h1>
+        
         <input
     type="image"
     src="images/first.png"
@@ -74,14 +77,43 @@
 
 
         </div>
-    <video id="myVideo" onended="clearEverything2()">
+    <video id="myVideo" preload="metadata" onended="clearEverything2()">
     <source src="Video-1.m4v" type="video/mp4" />
 </div>
 
 <script>
+
+
 let myElements = document.querySelectorAll("img");
 let vid = document.getElementById("myVideo");
 let playBtn = document.getElementById("playBtn");
+var loading= document.getElementById("loading");
+var i = 0;
+  if (i == 0) {
+    i = 1;
+    
+    var width = 1;
+    var id = setInterval(frame, 50);
+    
+    
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        loading.style.display="none";
+        playBtn.disabled=false;
+        i = 0;
+      } else {
+        width++;
+        loading.innerHTML=width;
+        loading.style.opacity=1-(width/100);
+     
+      }
+    }
+  }
+
+
+
+
 
 function videoPlay() {
 
@@ -151,7 +183,6 @@ function myFunction(imgID, myCheck) {
 }
 
 </script>
-
  
   </body>
 
